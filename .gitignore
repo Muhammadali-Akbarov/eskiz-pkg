@@ -1,0 +1,4 @@
+dist/
+venv/
+.vscode/
+__pycache__/
