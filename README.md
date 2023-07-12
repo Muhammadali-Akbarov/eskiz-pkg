@@ -1,6 +1,6 @@
 # Integration Eskiz SMS API with Python | SMS Service 
 Sourcode and Resources for Eskiz & Python <hr>
-Support Telegram - http://t.me/Muhammadalive <br>
+Support Telegram - http://t.me/muhammadali_me <br>
 Documentation & More https://documenter.getpostman.com/view/663428/RzfmES4z?version=latest<br>
 <hr>
 <p align="center">
