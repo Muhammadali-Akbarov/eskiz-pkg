@@ -14,7 +14,6 @@ Password: j6DWtQjjpLDNjWEk74Sx
 ## Docs
    * [Auth](#auth)
    * [Refresh Token](#refresh-token)
-   * [Add Contact](#add-contact)
    * [Send SMS](#send-sms)
 ## Auth
 Example for auth get token:
