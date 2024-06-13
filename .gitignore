@@ -1,4 +1,7 @@
 dist/
+build/
 venv/
 .vscode/
 __pycache__/
+app.py
+eskiz_pkg.egg-info/

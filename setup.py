@@ -3,7 +3,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='eskiz-pkg',
-    version='1.1',
+    version='1.2',
     license='MIT',
     author="Muhammadali Akbarov",
     author_email='muhammadali17abc@gmail.com',
@@ -12,6 +12,7 @@ setup(
     url='https://github.com/Muhammadali-Akbarov/eskiz-pkg',
     keywords='eskiz sms smspy eskizuz eskiz-pkg sms-service smsuz',
     install_requires=[
-          'requests',
-      ],
+        'requests',
+        'pydantic'
+    ],
 )
