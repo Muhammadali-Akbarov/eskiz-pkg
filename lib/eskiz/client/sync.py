@@ -5,6 +5,7 @@ from eskiz.enum import Network
 from eskiz.client.http import HttpClient
 from eskiz import request as eskiz_request
 from eskiz import response as eskiz_response
+from eskiz import exception as eskiz_exception
 
 
 class ClientSync:
@@ -62,7 +63,7 @@ class ClientSync:
 
         return eskiz_response.RefreshTokenResponse(**response)
 
-    def user(self, timeout=60) -> eskiz_response.UserResponse:
+    def _user(self, timeout=60) -> eskiz_response.UserResponse:
         """
         Retrieves user information
         """
@@ -73,7 +74,7 @@ class ClientSync:
 
         return eskiz_response.UserResponse(**response)
 
-    def send_sms(self, phone_number: int, message: str, timeout=60) -> eskiz_response.SendSMSResponse:
+    def _send_sms(self, phone_number: int, message: str, timeout=60) -> eskiz_response.SendSMSResponse:
         """
         Sends a new message to the given number
         Args:
@@ -94,3 +95,27 @@ class ClientSync:
         response = self.client.request("POST", url, files=files, timeout=timeout, headers=headers)
 
         return eskiz_response.SendSMSResponse(**response)
+
+    def user(self, timeout=60) -> eskiz_response.UserResponse:
+        """
+        Retrieves user information
+        """
+        try:
+            return self._user(timeout)
+        except eskiz_exception.TokenExpired:
+            self.login(timeout)
+            return self._user(timeout)
+
+    def send_sms(self, phone_number: int, message: str, timeout=60) -> eskiz_response.SendSMSResponse:
+        """
+        Sends a new message to the given number
+        Args:
+            phone_number (str): The recipient phone number
+            message (str): The message text
+            timeout (int, optional): The request timeout. Defaults to 60.
+        """
+        try:
+            return self._send_sms(phone_number, message, timeout)
+        except eskiz_exception.TokenExpired:
+            self.login(timeout)
+            return self._send_sms(phone_number, message, timeout)
