@@ -1,5 +1,5 @@
 # Integration Eskiz.uz SMS Provider
-Support Telegram - http://t.me/muhammadali_me <br>
+Support by Telegram - http://t.me/muhammadali_me <br>
 
 ```
 $ pip install eskiz-pkg
