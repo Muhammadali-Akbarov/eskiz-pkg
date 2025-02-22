@@ -119,3 +119,29 @@ class ClientSync:
         except eskiz_exception.TokenExpired:
             self.login(timeout)
             return self._send_sms(phone_number, message, timeout)
+
+    def _get_balance(self, timeout=60) -> eskiz_response.GetLimitResponse:
+        """
+        Fetches the SMS balance from Eskiz.uz.
+        """
+        url = f"{self.network}/api/user/get-limit"
+        headers = self.headers
+        response = self.client.request("GET", url, headers=headers, timeout=timeout)
+        return eskiz_response.GetLimitResponse(**response)
+
+    def get_balance(self, timeout=60) -> int:
+        """
+        Retrieves the current SMS balance.
+
+        Returns:
+            int: Number of SMS credits remaining, or 0 if failed.
+        """
+        try:
+            response = self._get_balance(timeout)
+            if response.status == "success":
+                return response.data.get("balance", 0)
+            return 0
+        except eskiz_exception.TokenExpired:
+            self.login(timeout)
+            response = self._get_balance(timeout)
+            return response.data.get("balance", 0) if response.status == "success" else 0
