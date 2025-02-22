@@ -65,3 +65,25 @@ Response
 ```
 eyJleHAiOjE3MjA4NTQ5NTUsImlhdCI6MTcxODI2Mjk1NSwicm9sZSI6InVzZXIiLCJzaWduIjoiNjU5OWQ1MWU4ZjU0NTFmMjc3OTQ1MTA3N2NmMzdmMTMxM2QzYjkzMDk1Y
 ```
+
+## Check Balance
+Example for checking the SMS balance:
+
+Request
+
+```
+from eskiz.client.sync import ClientSync
+
+eskiz_client = ClientSync(
+    email="test@eskiz.uz",
+    password="j6DWtQjjpLDNjWEk74Sx",
+)
+
+balance = eskiz_client.get_balance()
+print(f"Remaining SMS credits: {balance}")
+```
+Response
+
+```
+Remaining SMS credits: 0
+```
