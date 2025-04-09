@@ -22,6 +22,7 @@
 <p align="center">Welcome to eskiz-pkg, the open source Python SDK for Eskiz.uz SMS API.</p>
 
 <p align="center">You can use it for both synchronous and asynchronous applications with automatic token refresh.</p>
+
 ## Installation
 
 ### Basic Installation
