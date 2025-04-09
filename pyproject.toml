@@ -1,0 +1,43 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "eskiz-pkg"
+version = "2.0.0"
+description = "Python client for Eskiz.uz SMS API"
+readme = "README.md"
+authors = [
+    {name = "Muhammadali Akbarov", email = "muhammadali17abc@gmail.com"}
+]
+license = {text = "MIT"}
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
+keywords = ["eskiz", "sms", "smspy", "eskizuz", "eskiz-pkg", "sms-service", "smsuz"]
+dependencies = [
+    "requests",
+    "pydantic"
+]
+
+[project.urls]
+Homepage = "https://github.com/Muhammadali-Akbarov/eskiz-pkg"
+Issues = "https://github.com/Muhammadali-Akbarov/eskiz-pkg/issues"
+
+[project.optional-dependencies]
+async = ["aiohttp>=3.8.0"]
+dev = ["pytest", "pytest-asyncio", "flake8", "mypy"]
+
+[tool.setuptools]
+package-dir = {"" = "lib"}
+
+[tool.setuptools.packages.find]
+where = ["lib"]
