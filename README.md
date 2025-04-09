@@ -25,18 +25,18 @@
 <h2 align="center">Features</h2>
 
 <p align="center">
-  <table align="center">
+  <table align="">
     <tr>
-      <td align="center">✅ Sync & Async Support</td>
-      <td align="center">✅ Automatic Token Refresh</td>
+      <td align="">✅ Sync & Async Support</td>
+      <td align="">✅ Automatic Token Refresh</td>
     </tr>
     <tr>
-      <td align="center">✅ Batch SMS Sending</td>
-      <td align="center">✅ International SMS</td>
+      <td align="">✅ Batch SMS Sending</td>
+      <td align="">✅ International SMS</td>
     </tr>
     <tr>
-      <td align="center">✅ Message Templates</td>
-      <td align="center">✅ Detailed Reporting</td>
+      <td align="">✅ Message Templates</td>
+      <td align="">✅ Detailed Reporting</td>
     </tr>
   </table>
 </p>
