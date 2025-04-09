@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "eskiz-pkg"
-version = "2.0.0"
+version = "2.0.1"
 description = "Python client for Eskiz.uz SMS API"
 readme = "README.md"
 authors = [
