@@ -1,5 +1,46 @@
-# Integration Eskiz.uz SMS Provider
-Support by Telegram - http://t.me/muhammadali_me <br>
+<h1 align="center">Eskiz.uz SMS Integration SDK</h1>
+
+<p align="center">
+  <a href="http://t.me/muhammadali_me">
+    <img src="https://img.shields.io/badge/Support-blue?logo=telegram&logoColor=white" alt="Support on Telegram"/>
+  </a>
+</p>
+
+<p align="center">
+  <a href="https://github.com/Muhammadali-Akbarov/eskiz-pkg"><img src="https://img.shields.io/badge/Open_Source-❤️-FDA599?"/></a>
+  <a href="https://github.com/Muhammadali-Akbarov/eskiz-pkg/issues">
+    <img src="https://img.shields.io/github/issues/Muhammadali-Akbarov/eskiz-pkg" />
+  </a>
+  <a href="https://pepy.tech/project/eskiz-pkg">
+    <img src="https://static.pepy.tech/badge/eskiz-pkg" alt="PyPI - Downloads" />
+  </a>
+  <a href="https://pypi.org/project/eskiz-pkg/">
+    <img src="https://img.shields.io/pypi/v/eskiz-pkg" alt="PyPI - Version" />
+  </a>
+</p>
+
+<p align="center">Welcome to eskiz-pkg, the open source Python SDK for Eskiz.uz SMS API.</p>
+
+<p align="center">You can use it for both synchronous and asynchronous applications with automatic token refresh.</p>
+<h2 align="center">Features</h2>
+
+<p align="center">
+  <table align="center">
+    <tr>
+      <td align="center">✅ Sync & Async Support</td>
+      <td align="center">✅ Automatic Token Refresh</td>
+    </tr>
+    <tr>
+      <td align="center">✅ Batch SMS Sending</td>
+      <td align="center">✅ International SMS</td>
+    </tr>
+    <tr>
+      <td align="center">✅ Message Templates</td>
+      <td align="center">✅ Detailed Reporting</td>
+    </tr>
+  </table>
+</p>
+
 
 ## Installation
 
